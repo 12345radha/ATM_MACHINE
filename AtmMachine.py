@@ -10,6 +10,7 @@ class Atm:
         return self.__pin
    #setter method
     def set_pin(self,new_pin):
+        #type is checked if pin is 5.6 that's why it is checking firstly the type of pin.
         if type(new_pin)==str:
             self.__pin=new_pin
             print("Pin Changed")
