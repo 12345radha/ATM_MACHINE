@@ -3,8 +3,19 @@ class Atm:
         self.__pin=""
         self.__balance=0
 
-        self.menu()
-    
+        self.__menu()
+
+    #getter method
+    def get_pin(self):
+        return self.__pin
+   #setter method
+    def set_pin(self,new_pin):
+        if type(new_pin)==str:
+            self.__pin=new_pin
+            print("Pin Changed")
+        else:
+            print("Not allowed")
+            
     def __menu(self):
         user_input=input("""
                         Hello,how would you like to proceed?
@@ -64,7 +75,7 @@ Sbi=Atm()
 while 1:
     option=int(input("Enter the menu number:"))
     if option in [1,2,3,4]:
-        Sbi.menu()
+        Sbi.__menu()
     else:
-        Sbi.menu()
+        Sbi.__menu()
         break
